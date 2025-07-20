@@ -3,10 +3,10 @@ module.exports = {
     browser: true,
     es2021: true,
     jest: true,
+    node: true,
   },
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
@@ -24,6 +24,8 @@ module.exports = {
     'react/prop-types': 'warn',
     'no-unused-vars': 'error',
     'no-console': 'warn',
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 'error',
   },
   settings: {
     react: {
