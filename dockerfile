@@ -1,5 +1,5 @@
 # Build stage
-FROM node:18-alpine as build-stage
+FROM node:20-alpine as build-stage
 
 # Set working directory
 WORKDIR /app/otero_samir_ui_garden_build_checks
@@ -7,8 +7,11 @@ WORKDIR /app/otero_samir_ui_garden_build_checks
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Skip prepare script during build (avoids husky error)
+ENV HUSKY_SKIP_INSTALL=1
+
+# Install dependencies (devDeps OK here because we skip husky)
+RUN npm ci
 
 # Copy source code
 COPY . .
