@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+# UI Component Library with Build Checks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based UI component library with automated code quality checks using Husky, ESLint, Prettier, and GitHub Actions.
+
+## Features
+
+- 🎨 Reusable UI components
+- 🔧 Pre-commit hooks with Husky
+- ✨ Code formatting with Prettier
+- 🔍 Linting with ESLint
+- 🧪 Automated testing
+- 🐳 Docker containerization
+- 🚀 CI/CD with GitHub Actions
+
+## Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Docker
+- Git
+
+## Getting Started
+
+### Local Development
+
+**Clone the repository:**
+```bash
+git clone <your-repo-url>
+cd otero_samir_ui_garden_build_checks
+```
+
+**Install dependencies:**
+```bash
+npm install
+```
+
+**Start development server:**
+```bash
+npm start
+```
+
+**Run tests:**
+```bash
+npm test
+```
+
+**Build for production:**
+```bash
+npm run build
+```
+
+---
+
+## Docker Deployment
+
+### Method 1: Using Docker directly
+
+**Build the Docker image:**
+```bash
+docker build -t otero_samir_coding_assignment13 .
+```
+
+**Run the container:**
+```bash
+docker run -d -p 8018:80 --name otero_samir_coding_assignment13 otero_samir_coding_assignment13
+```
+
+**Access the application:**
+Open your browser and navigate to [http://localhost:8018](http://localhost:8018)
+
+---
+
+### Method 2: Using Docker Compose
+
+**Start the application:**
+```bash
+docker-compose up -d
+```
+
+**Access the application:**
+Open your browser and navigate to [http://localhost:8018](http://localhost:8018)
+
+**Stop the application:**
+```bash
+docker-compose down
+```
+
+---
+
+## Stopping the Container
+
+```bash
+# Stop the container
+docker stop otero_samir_coding_assignment13
+
+# Remove the container
+docker rm otero_samir_coding_assignment13
+
+# Remove the image (optional)
+docker rmi otero_samir_coding_assignment13
+```
+
+---
+
+## Code Quality Checks
+
+This project includes automated code quality checks that run:
+
+### Pre-commit Hooks (Local)
+- Prettier: Code formatting
+- ESLint: Code linting and error detection
+- Tests: Unit and integration tests
+
+### GitHub Actions (CI/CD)
+- All pre-commit checks
+- Multi-node version testing
+- Docker build verification
+- Test coverage reporting
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Start development server
+- `npm test` - Run tests in watch mode
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+otero_samir_ui_garden_build_checks/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Button/
+│   │   │   ├── Button.js
+│   │   │   ├── Button.css
+│   │   │   └── Button.test.js
+│   │   └── index.js
+│   ├── App.js
+│   └── index.js
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── .husky/
+│   └── pre-commit
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── .eslintrc.js
+├── .prettierrc
+└── README.md
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
 
-### `npm run build`
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Ensure all checks pass locally
+5. Submit a pull request
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The pre-commit hooks will ensure code quality standards are met before any commit is allowed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
