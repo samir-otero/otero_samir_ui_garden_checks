@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Button } from './components';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>UI Component Library</h1>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button variant="primary" size="small">Small Primary</Button>
+          <Button variant="primary" size="medium">Medium Primary</Button>
+          <Button variant="primary" size="large">Large Primary</Button>
+          <Button variant="secondary" size="medium">Secondary</Button>
+          <Button variant="primary" size="medium" disabled>Disabled</Button>
+        </div>
       </header>
     </div>
   );
