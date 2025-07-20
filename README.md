@@ -25,7 +25,7 @@ A React-based UI component library with automated code quality checks using Husk
 
 **Clone the repository:**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/samir-otero/otero_samir_ui_garden_checks.git
 cd otero_samir_ui_garden_build_checks
 ```
 
