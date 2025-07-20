@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ui-garden:
+    build: .
+    container_name: otero_samir_coding_assignment13
+    ports:
+      - "8018:80"
+    restart: unless-stopped
