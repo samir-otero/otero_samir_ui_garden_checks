@@ -37,6 +37,7 @@ function App() {
             label="Outlined Input"
             placeholder="Enter your name"
             value=""
+            onChange={() => {}}
             size="medium"
             variant="outlined"
           />
@@ -44,6 +45,7 @@ function App() {
             label="Filled Input"
             placeholder="Enter your email"
             value=""
+            onChange={() => {}}
             size="medium"
             variant="filled"
           />
@@ -51,6 +53,7 @@ function App() {
             label="Underlined Input"
             placeholder="Enter your password"
             value=""
+            onChange={() => {}}
             size="medium"
             variant="underlined"
           />

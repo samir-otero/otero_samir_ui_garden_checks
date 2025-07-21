@@ -42,8 +42,9 @@ jobs:
     - name: Upload test coverage
       uses: actions/upload-artifact@v4
       with:
-        name: coverage-report
+        name: test-coverage-${{ github.run_number }}-${{ github.run_attempt }}
         path: coverage/
+
 
   docker-build:
     needs: test-and-build
