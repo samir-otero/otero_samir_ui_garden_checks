@@ -1,4 +1,6 @@
 import { Button } from './components';
+import { Card } from './components';
+import { Input } from './components';
 import './App.css';
 
 function App() {
@@ -22,6 +24,60 @@ function App() {
           <Button variant="primary" size="medium" disabled>
             Disabled
           </Button>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            marginTop: '2rem',
+          }}
+        >
+          <Input
+            label="Outlined Input"
+            placeholder="Enter your name"
+            value=""
+            size="medium"
+            variant="outlined"
+          />
+          <Input
+            label="Filled Input"
+            placeholder="Enter your email"
+            value=""
+            size="medium"
+            variant="filled"
+          />
+          <Input
+            label="Underlined Input"
+            placeholder="Enter your password"
+            value=""
+            size="medium"
+            variant="underlined"
+          />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            gap: '1rem',
+            flexWrap: 'wrap',
+            marginTop: '2rem',
+            justifyContent: 'center',
+          }}
+        >
+          <Card variant="default" elevation="medium" padding="medium">
+            <h2>Default Card</h2>
+            <p>With medium elevation and padding</p>
+          </Card>
+          <Card variant="outlined" elevation="low" padding="small">
+            <h2 style={{ color: 'black' }}>Outlined Card</h2>
+            <p style={{ color: 'black' }}>
+              With low elevation and small padding
+            </p>
+          </Card>
+          <Card variant="filled" elevation="high" padding="large">
+            <h2>Filled Card</h2>
+            <p>With high elevation and large padding</p>
+          </Card>
         </div>
       </header>
     </div>
